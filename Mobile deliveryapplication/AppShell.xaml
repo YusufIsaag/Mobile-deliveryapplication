@@ -12,4 +12,12 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Bestellingen" Icon="orders.png">
+        <ShellContent ContentTemplate="{DataTemplate local:OrdersPage}" />
+    </FlyoutItem>
+
 </Shell>
