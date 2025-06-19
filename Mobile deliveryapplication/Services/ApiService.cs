@@ -10,8 +10,8 @@ namespace Mobile_deliveryapplication.API
     public static class ApiService
     {
         
-            static void Main(string[] args)
-            {
+           public static void GetDeliveryServices()
+        {
                 using (var client = new HttpClient())
                 {
                     var apiKey = "b9e7d970-8d82-4b56-92d8-d18fbb4b68a7";

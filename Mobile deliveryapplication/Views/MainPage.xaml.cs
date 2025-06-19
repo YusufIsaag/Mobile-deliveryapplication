@@ -1,7 +1,7 @@
-﻿namespace Mobile_deliveryapplication
+namespace Mobile_deliveryapplication.Views;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
-    {
         int count = 0;
 
         public MainPage()
@@ -20,6 +20,4 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
-    }
-
 }
