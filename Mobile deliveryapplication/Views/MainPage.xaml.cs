@@ -1,23 +1,40 @@
+using CommunityToolkit.Maui;
+
 namespace Mobile_deliveryapplication.Views;
 
 public partial class MainPage : ContentPage
 {
-        int count = 0;
+    private void OnAccountButtonClicked(object sender, EventArgs e)
+    {
+        // Bijvoorbeeld: navigeren naar een profielpagina
+        Console.WriteLine("Account-knop geklikt!");
+    }
 
-        public MainPage()
+    public MainPage()
         {
-            InitializeComponent();
+        InitializeComponent();
         }
-
-        private void OnCounterClicked(object sender, EventArgs e)
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
         {
-            count++;
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                // Initialize the .NET MAUI Community Toolkit by adding the below line of code
+                .UseMauiCommunityToolkit()
+                // After initializing the .NET MAUI Community Toolkit, optionally add additional fonts
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            // Continue initializing your .NET MAUI App here
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            return builder.Build();
         }
+    }
+
+
 }

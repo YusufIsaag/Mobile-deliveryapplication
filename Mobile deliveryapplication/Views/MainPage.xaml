@@ -2,40 +2,92 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile_deliveryapplication.Views.MainPage"
-             Title="MainPage"
+             Title="Matrix Inc."
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              BackgroundColor="#293335">
+
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="DarkCyan" StatusBarStyle="LightContent"/>
+    </Page.Behaviors>
+
     <ScrollView>
-
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="bus_logo_darkcyan.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
-
+        <Grid>
             <Label
-                Text="Hello, World!"
+                Text="Nieuws"
                 TextColor="White"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                FontSize="18"
+                FontAttributes="None"
+                HorizontalOptions="Start" 
+                VerticalOptions="Start"
+                Margin="15,10"/>
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                TextColor="White"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-            <Button
-                BackgroundColor="White"
-                x:Name="CounterBtn"
-                Text="Click me" 
-                TextColor="Black"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
+            <Border 
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                HeightRequest="200"
+                WidthRequest="350"
+                Background="darkslategrey"
+                Stroke="White"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20, 10, 0, 40"
+                Margin="15,50">
+                <VerticalStackLayout Padding="15" Spacing="8">
+                    <Label Text="Nieuwe bezorgroute actief in regio Limburg" 
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"/>
+                    <Label Text="Vanaf volgende week is de nieuwe route naar Roermond actief. Controleer je planning in de app."
+                           TextColor="White"
+                           FontSize="13"
+                           />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border 
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                HeightRequest="200"
+                WidthRequest="350"
+                Background="darkslategrey"
+                Stroke="White"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20, 10, 0, 40"
+                Margin="15,270">
+                <VerticalStackLayout Padding="15" Spacing="8">
+                    <Label Text="Bezorger van de maand: Ahmed uit Maastricht" 
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"/>
+                    <Label Text="Gefeliciteerd Ahmed! Hij behaalde een gemiddelde beoordeling van 4.9 sterren. Goed bezig!"
+                           TextColor="White"
+                           FontSize="13"
+                           />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border 
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                HeightRequest="200"
+                WidthRequest="350"
+                Background="darkslategrey"
+                Stroke="White"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20, 10, 0, 40"
+                Margin="15,490,0,0">
+                <VerticalStackLayout Padding="15" Spacing="8">
+                    <Label Text="Doe mee: win een cadeaubon met onze zomeractie!" 
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"/>
+                    <Label Text="Lever deze maand 50 pakketten of meer af en maak kans op een cadeaubon t.w.v. €50,-."
+                           TextColor="White"
+                           FontSize="13"
+                           />
+                </VerticalStackLayout>
+            </Border>
+
+        </Grid>
     </ScrollView>
 
 </ContentPage>
