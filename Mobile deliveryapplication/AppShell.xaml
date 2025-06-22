@@ -3,13 +3,27 @@
     x:Class="Mobile_deliveryapplication.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Mobile_deliveryapplication"
+    xmlns:views="clr-namespace:Mobile_deliveryapplication.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="Mobile_deliveryapplication">
+    Title="Mobile_deliveryapplication"
+    Shell.BackgroundColor ="DarkCyan"
+    Shell.TitleColor="White">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.ToolbarItems>
+        <ToolbarItem
+            Text="Account"
+            IconImageSource="account.png"
+            Clicked="ToolbarItem_Clicked"/>
+    </Shell.ToolbarItems>
+    <TabBar>
+         <Tab Title="Home" Icon="home_icon.png" Route="MainPage">
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}"/>
+        </Tab>
+
+
+        <Tab Title="Account" Icon="account.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:Account}" />
+        </Tab>
+    </TabBar>
 
 </Shell>
