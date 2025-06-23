@@ -16,12 +16,10 @@
             Clicked="ToolbarItem_Clicked"/>
     </Shell.ToolbarItems>
     <TabBar>
-         <Tab Title="Home" Icon="home_icon.png" Route="MainPage">
+        <Tab Title="Home" Icon="home_icon.png" Route="MainPage">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}"/>
         </Tab>
-
-
-        <Tab Title="Account" Icon="account.png" >
+        <Tab Title="Testpage" Icon="account.png" >
             <ShellContent ContentTemplate="{DataTemplate views:Account}" />
         </Tab>
     </TabBar>
