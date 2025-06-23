@@ -17,7 +17,7 @@
         </Border>
         <Label 
             Text="Erik"
-            VerticalOptions="Center" 
+            VerticalOptions="Center"  
             HorizontalOptions="Center"
             FontAttributes="Bold"/>
         <Border
