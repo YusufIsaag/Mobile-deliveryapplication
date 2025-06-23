@@ -4,9 +4,67 @@
              x:Class="Mobile_deliveryapplication.Views.Account"
              Title="Account">
     <VerticalStackLayout>
+        <Border
+            Stroke="Snow"
+            StrokeShape="RoundRectangle 200"
+            WidthRequest="100"
+            HeightRequest="100"
+            Margin="10, 30, 10, 10">
+            <Image
+                Source="account.png"
+                HeightRequest="100"
+                WidthRequest="100"/>
+        </Border>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Erik"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontAttributes="Bold"/>
+        <Border
+            HeightRequest="50"
+            WidthRequest="350"
+            BackgroundColor="Gray"
+            Margin="10, 20, 10, 0"
+            
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <Label
+                    Text="Mijn gegevens                                                    >"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    Margin="50,0,0,0"/>
+        </Border>
+        <Border
+            HeightRequest="50"
+            WidthRequest="350"
+            BackgroundColor="Gray"
+            Margin="10, 20, 10, 0"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <Label
+                Text="Mijn declaraties                                                 >"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Margin="50,0,0,0"/>
+        </Border>
+        <Border
+            HeightRequest="50"
+            WidthRequest="350"
+            BackgroundColor="Gray"
+            Margin="10, 20, 10, 0"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <HorizontalStackLayout>
+            <Image 
+                Source="https://www.citypng.com/public/uploads/preview/settings-white-outline-icon-download-png-701751694974641xsiiydfokh.png"
+                HeightRequest="50"
+                WidthRequest="50"/>
+            <Label
+                Text="App Instellingen                                  >"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Margin="50,0,0,0"/>
+            </HorizontalStackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
