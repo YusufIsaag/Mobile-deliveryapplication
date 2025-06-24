@@ -6,8 +6,7 @@ public partial class MainPage : ContentPage
 {
     private void OnAccountButtonClicked(object sender, EventArgs e)
     {
-        // Bijvoorbeeld: navigeren naar een profielpagina
-        Console.WriteLine("Account-knop geklikt!");
+       ;
     }
 
     public MainPage()

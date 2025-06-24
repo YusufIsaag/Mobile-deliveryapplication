@@ -41,11 +41,15 @@
             Margin="10, 20, 10, 0"
             StrokeThickness="1"
             StrokeShape="RoundRectangle 5">
-            <Label
+            <Button
+                BackgroundColor="Gray"
+                x:Name="Declartiesbutton"
+                Clicked="Declartiesbutton_Clicked"
                 Text="Mijn declaraties                                                 >"
+                TextColor="White"
                 FontAttributes="Bold"
                 VerticalOptions="Center"
-                Margin="50,0,0,0"/>
+                Margin="34,0,0,0"/>
         </Border>
         <Border
             HeightRequest="50"
@@ -60,10 +64,10 @@
                 HeightRequest="50"
                 WidthRequest="50"/>
             <Label
-                Text="App Instellingen                                  >"
+                Text="App Instellingen                                             >"
                 FontAttributes="Bold"
                 VerticalOptions="Center"
-                Margin="50,0,0,0"/>
+                Margin="10,0,0,0"/>
             </HorizontalStackLayout>
         </Border>
     </VerticalStackLayout>
