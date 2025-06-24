@@ -16,7 +16,7 @@ namespace Mobile_deliveryapplication.API
             using (var client = new HttpClient())
                 {
                     var apiKey = "b9e7d970-8d82-4b56-92d8-d18fbb4b68a7";
-                    var endpoint = new Uri($"http://51.137.100.120:5000/api/DeliveryServices/b9e7d970-8d82-4b56-92d8-d18fbb4b68a7\r\n");
+                    var endpoint = new Uri($"http://51.137.100.120:5000/api/DeliveryServices/b9e7d970-8d82-4b56-92d8-d18fbb4b68a7");
 
                     var result = client.GetAsync(endpoint).Result;
 
