@@ -1,0 +1,32 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_deliveryapplication.Views.BestellingenPage"
+             Title="Mijn Bestellingen"
+             BackgroundColor="#293335">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Label Text="Actieve Bestellingen"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="White"/>
+
+            <!-- Voorbeeld bestelling -->
+            <Border BackgroundColor="darkslategrey" 
+                    Stroke="White" 
+                    StrokeThickness="1" 
+                    StrokeShape="RoundRectangle 10"
+                    Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Bestelling #1234 - Adres: Marktstraat 5"
+                           TextColor="White"/>
+                    <Button Text="Voltooien met foto"
+                            Clicked="OnVoltooienMetFotoClicked"
+                            BackgroundColor="DarkCyan"
+                            TextColor="White"
+                            CornerRadius="15"/>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

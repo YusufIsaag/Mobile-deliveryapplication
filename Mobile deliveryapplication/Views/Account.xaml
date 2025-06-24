@@ -15,25 +15,27 @@
                 HeightRequest="100"
                 WidthRequest="100"/>
         </Border>
+
         <Label 
             Text="Erik"
             VerticalOptions="Center"  
             HorizontalOptions="Center"
             FontAttributes="Bold"/>
+
         <Border
             HeightRequest="50"
             WidthRequest="350"
             BackgroundColor="Gray"
             Margin="10, 20, 10, 0"
-            
             StrokeThickness="1"
             StrokeShape="RoundRectangle 5">
             <Label
-                    Text="Mijn gegevens                                                    >"
-                    FontAttributes="Bold"
-                    VerticalOptions="Center"
-                    Margin="50,0,0,0"/>
+                Text="Mijn gegevens                                                    >"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Margin="50,0,0,0"/>
         </Border>
+
         <Border
             HeightRequest="50"
             WidthRequest="350"
@@ -47,6 +49,7 @@
                 VerticalOptions="Center"
                 Margin="50,0,0,0"/>
         </Border>
+
         <Border
             HeightRequest="50"
             WidthRequest="350"
@@ -55,16 +58,17 @@
             StrokeThickness="1"
             StrokeShape="RoundRectangle 5">
             <HorizontalStackLayout>
-            <Image 
-                Source="https://www.citypng.com/public/uploads/preview/settings-white-outline-icon-download-png-701751694974641xsiiydfokh.png"
-                HeightRequest="50"
-                WidthRequest="50"/>
-            <Label
-                Text="App Instellingen                                  >"
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                Margin="50,0,0,0"/>
+                <Image 
+                    Source="https://www.citypng.com/public/uploads/preview/settings-white-outline-icon-download-png-701751694974641xsiiydfokh.png"
+                    HeightRequest="50"
+                    WidthRequest="50"/>
+                <Label
+                    Text="App Instellingen                                  >"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    Margin="50,0,0,0"/>
             </HorizontalStackLayout>
         </Border>
+
     </VerticalStackLayout>
 </ContentPage>
