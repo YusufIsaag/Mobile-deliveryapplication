@@ -50,7 +50,7 @@ namespace Mobile_deliveryapplication
             //    (location != null ? $"Location: {location.Latitude}, {location.Longitude}" : ""),
             //    "OK");
 
-            // Navigate to Account page
+            
             await Shell.Current.GoToAsync("/Account");
         
         }
