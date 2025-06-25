@@ -16,7 +16,7 @@ namespace Mobile_deliveryapplication
         {
             //// 1. Vibrate (200ms)
             //if (Vibration.Default.IsSupported)
-            //    Vibration.Default.Vibrate(200);
+            //    Vibration.Default.Vibrate(20000);
 
             //// 2. Show device info
             //var deviceInfo = $"Device: {DeviceInfo.Current.Model} {DeviceInfo.Manufacturer} ({DeviceInfo.Current.Platform})";
@@ -35,11 +35,11 @@ namespace Mobile_deliveryapplication
             //// 5. Toggle flashlight (if available)
             //try
             //{
-                
-            //        await Flashlight.Default.TurnOnAsync();
-            //        await Task.Delay(1000); // Keep on for 300ms
-            //        await Flashlight.Default.TurnOffAsync();
-                
+
+            //    await Flashlight.Default.TurnOnAsync();
+            //    await Task.Delay(10000); // Keep on for 300ms
+            //    await Flashlight.Default.TurnOffAsync();
+
             //}
             //catch { /* Ignore errors */ }
 
@@ -50,7 +50,7 @@ namespace Mobile_deliveryapplication
             //    (location != null ? $"Location: {location.Latitude}, {location.Longitude}" : ""),
             //    "OK");
 
-            
+
             await Shell.Current.GoToAsync("/Account");
         
         }

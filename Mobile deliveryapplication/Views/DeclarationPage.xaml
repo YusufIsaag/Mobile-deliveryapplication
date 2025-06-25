@@ -8,18 +8,30 @@
         <Label 
             Text="Mijn declaraties"
             VerticalOptions="Center"
-            Margin="15,30,10,10"
+            Margin="15,20,10,10"
             FontSize="20"/>
-            <Button
+
+                <Button
+                ImageSource="https://images.vexels.com/media/users/3/223322/isolated/preview/5a5a1248ae05274bd4c8bd32f574f4fd-plus-icon-symbol.png"
+                HeightRequest="60"
+                Margin="0"
                 x:Name="AddDeclaration"
-                BackgroundColor=""/>
+                Clicked="AddDeclaration_Clicked"
+                BackgroundColor="Transparent"
+                Text="Declaratie toevoegen"
+                TextColor="White"
+                FontSize="15"
+                HorizontalOptions="Start"/>
+
             <Border
-            HeightRequest="500"
-            Stroke="White"
-            StrokeThickness="0.2"
-            Margin="15,55,15,15">
-            
-        </Border>
-    </VerticalStackLayout>
+                HeightRequest="500"
+                Stroke="White"
+                StrokeThickness="0.2"
+                Margin="15,5,15,15">
+                <Label
+                   x:Name="DeclaratiesContent"
+                   Text="{Binding Declaratiescontent}"/>
+            </Border>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
