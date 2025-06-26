@@ -17,7 +17,14 @@
             <Entry Placeholder="Voer uw IBAN in"  />
 
             <Label Text="Type"/>
-            
+            <Picker Title="Selecteer declaratietype">
+                <Picker.Items>
+                    <x:String>Reiskosten</x:String>
+                    <x:String>Parkeerkosten</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <ProgressBar></ProgressBar>
             <Grid ColumnDefinitions="*,2*,*" Padding="0,20,0,0">
                 <Label 
                     Text="Datum" 
@@ -39,8 +46,8 @@
 
             <Label Text="Voeg een foto toe"/>
             <Button 
-                    Text="+ " 
-                    FontSize="30"
+                    ImageSource="https://pixsector.com/cache/d01b7e30/av7801257c459e42a24b5.png"
+                    
                     BackgroundColor="Gray" 
                     TextColor="White" 
                     CornerRadius="3" 
