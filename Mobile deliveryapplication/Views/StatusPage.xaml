@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Mobile_deliveryapplication.StatusPage"
+    Title="Pakketstatus">
+
+    <VerticalStackLayout Padding="20" Spacing="30">
+
+        <Label Text="Pakketstatus"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <ProgressBar x:Name="StatusProgress" Progress="0.0" HeightRequest="10" />
+
+        <Label x:Name="StatusLabel"
+               Text="Status: Aangenomen"
+               FontSize="18"
+               TextColor="DarkGreen"
+               HorizontalOptions="Center" />
+
+        <Button Text="Volgende stap" Clicked="OnNextStepClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
