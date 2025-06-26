@@ -1,4 +1,7 @@
 ﻿using Microsoft.Maui.Media;
+using System;
+using System.IO;
+using Microsoft.Maui.Controls;
 
 namespace Mobile_deliveryapplication.Views;
 
@@ -11,10 +14,10 @@ public partial class MainPage : ContentPage
 
     private void OnAccountButtonClicked(object sender, EventArgs e)
     {
-       ;
+        // Hier kun je later account-functionaliteit toevoegen
     }
 
-    // ✅ Hier voeg je de camera-functie toe:
+    // Camera-functie: foto maken en opslaan
     private async void OnTakePhotoClicked(object sender, EventArgs e)
     {
         try
@@ -37,4 +40,11 @@ public partial class MainPage : ContentPage
             await DisplayAlert("Fout", $"Kon geen foto maken: {ex.Message}", "OK");
         }
     }
+
+    // Navigatie naar StatusPage
+    private async void OnViewStatusClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new StatusPage());
+    }
 }
+
