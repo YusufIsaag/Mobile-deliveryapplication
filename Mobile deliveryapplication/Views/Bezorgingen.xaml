@@ -4,9 +4,14 @@
              x:Class="Mobile_deliveryapplication.Views.Bezorgingen"
              Title="Bezorgingen">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Button
+            Text="Start de bezorging"
+            BackgroundColor="DarkCyan"
+            TextColor="White"
+            FontSize="18"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="20"/>
     </VerticalStackLayout>
 </ContentPage>
