@@ -53,7 +53,7 @@ namespace Mobile_deliveryapplication.Views
             if (input.Contains("vertraging") || input.Contains("later") || input.Contains("ik red het niet") || input.Contains("verlaat"))
                 return "Geen probleem, neem je tijd.";
 
-            if (input.Contains("hallo") || input.Contains("hey") || input.Contains("hi"))
+            if (input.Contains("hallo") || input.Contains("hey") || input.Contains("hi") || input.Contains("hoi"))
                 return "Hoi!?";
 
             if (input.Contains("onderweg") || input.Contains("ben onderweg") || input.Contains("kom eraan"))
