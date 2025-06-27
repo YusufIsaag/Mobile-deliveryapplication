@@ -54,7 +54,7 @@ namespace Mobile_deliveryapplication.Views
                 return "Geen probleem, neem je tijd.";
 
             if (input.Contains("hallo") || input.Contains("hey") || input.Contains("hi"))
-                return "Hoi! Hoe kan ik je helpen?";
+                return "Hoi!?";
 
             if (input.Contains("onderweg") || input.Contains("ben onderweg") || input.Contains("kom eraan"))
                 return "Hoelang duurt het nog ongeveer?";
