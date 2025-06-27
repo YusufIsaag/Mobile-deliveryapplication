@@ -1,42 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile_deliveryapplication.Views.ChatPage"
-             Title="Chat">
+             Title="Chat met Klant">
 
-    <StackLayout Orientation="Vertical" Padding="10" Spacing="10">
+    <VerticalStackLayout Padding="10" Spacing="10">
 
-        <CollectionView ItemsSource="{Binding Messages}" 
+        <CollectionView x:Name="ChatCollection"
+                        ItemsSource="{Binding Messages}"
                         VerticalOptions="FillAndExpand">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame CornerRadius="12"
-                           Padding="10"
-                           Margin="5"
-                           HasShadow="True">
-                        <Label Text="{Binding Text}" TextColor="Black" />
+                    <HorizontalStackLayout
+                        HorizontalOptions="{Binding IsUser, Converter={StaticResource BerichtUitlijningConverter}}"
+                        Margin="{Binding IsUser, Converter={StaticResource BerichtMarginConverter}}">
 
-                        <Frame.Triggers>
-                            <DataTrigger TargetType="Frame" Binding="{Binding IsUser}" Value="True">
-                                <Setter Property="BackgroundColor" Value="LightBlue" />
-                                <Setter Property="HorizontalOptions" Value="End" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Frame" Binding="{Binding IsUser}" Value="False">
-                                <Setter Property="BackgroundColor" Value="LightGray" />
-                                <Setter Property="HorizontalOptions" Value="Start" />
-                            </DataTrigger>
-                        </Frame.Triggers>
-                    </Frame>
+                        <Frame BackgroundColor="{Binding IsUser, Converter={StaticResource BerichtKleurConverter}}"
+                               Padding="10"
+                               CornerRadius="10"
+                               HasShadow="False"
+                               MaximumWidthRequest="250">
+                            <Label Text="{Binding Text}"
+                                   TextColor="{Binding IsUser, Converter={StaticResource BerichtTekstKleurConverter}}" />
+                        </Frame>
+
+                    </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <StackLayout Orientation="Horizontal" Spacing="10">
+        <HorizontalStackLayout>
             <Entry x:Name="MessageEntry"
-                   Placeholder="Typ een bericht..."
+                   Placeholder="Typ hier je antwoord..."
                    HorizontalOptions="FillAndExpand" />
-            <Button Text="Versturen"
+            <Button Text="➤"
                     Clicked="OnSendClicked" />
-        </StackLayout>
-
-    </StackLayout>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>

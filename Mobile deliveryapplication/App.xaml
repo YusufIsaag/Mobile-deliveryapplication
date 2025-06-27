@@ -6,6 +6,11 @@
     <Application.Resources>
         <ResourceDictionary>
 
+            <models:BerichtUitlijningConverter x:Key="BerichtUitlijningConverter" />
+            <models:BerichtKleurConverter x:Key="BerichtKleurConverter" />
+            <models:BerichtTekstKleurConverter x:Key="BerichtTekstKleurConverter" />
+            <models:BerichtMarginConverter x:Key="BerichtMarginConverter" />
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

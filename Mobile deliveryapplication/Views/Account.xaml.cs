@@ -12,10 +12,4 @@ public partial class Account : ContentPage
     {
         await Shell.Current.GoToAsync("/DeclarationPage");
     }
-
-    private async void OnChatClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("ChatPage");
-    }
-
 }

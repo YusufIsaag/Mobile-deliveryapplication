@@ -3,106 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile_deliveryapplication.Views.Account"
              Title="Account">
-
-    <AbsoluteLayout>
-
-        <!-- Scrollbare inhoud -->
-        <ScrollView>
-            <VerticalStackLayout Padding="10" Spacing="20">
-
-                <!-- Profielfoto -->
-                <Border Stroke="Snow"
-                        StrokeShape="RoundRectangle 200"
-                        WidthRequest="100"
-                        HeightRequest="100"
-                        HorizontalOptions="Center"
-                        Margin="0,30,0,10">
-                    <Image Source="account.png"
-                           HeightRequest="100"
-                           WidthRequest="100" />
-                </Border>
-
-                <Label Text="Erik"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center" />
-
-                <!-- Mijn gegevens -->
-                <Border HeightRequest="50"
-                        WidthRequest="350"
-                        BackgroundColor="Gray"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 5"
-                        HorizontalOptions="Center">
-                    <Label Text="Mijn gegevens                                                    >"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"
-                           Margin="50,0,0,0" />
-                </Border>
-
-                <!-- Mijn declaraties -->
-                <Border HeightRequest="50"
-                        WidthRequest="350"
-                        BackgroundColor="Gray"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 5"
-                        HorizontalOptions="Center">
-                    <Button x:Name="Declartiesbutton"
-                            Clicked="Declartiesbutton_Clicked"
-                            BackgroundColor="Gray"
-                            Text="Mijn declaraties                                                 >"
-                            TextColor="White"
-                            FontAttributes="Bold"
-                            VerticalOptions="Center"
-                            Margin="34,0,0,0"/>
-                </Border>
-
-                <!-- App Instellingen -->
-                <Border HeightRequest="50"
-                        WidthRequest="350"
-                        BackgroundColor="Gray"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 5"
-                        HorizontalOptions="Center">
-                    <HorizontalStackLayout>
-                        <Label Text="App Instellingen                                                >"
-                               FontAttributes="Bold"
-                               VerticalOptions="Center"
-                               Margin="50,0,0,0" />
-                    </HorizontalStackLayout>
-                </Border>
-
-            </VerticalStackLayout>
-        </ScrollView>
-
-        <!-- Chatknop gecentreerd onderaan -->
-        <Border BackgroundColor="#007AFF"
-                StrokeShape="RoundRectangle 20"
-                WidthRequest="120"
-                HeightRequest="40"
-                AbsoluteLayout.LayoutBounds="0.5,1,AutoSize,AutoSize"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                Margin="0,0,0,20">
-            <HorizontalStackLayout VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   Spacing="5">
-                <Image Source="chat_icon.png"
-                       HeightRequest="16"
-                       WidthRequest="16" />
-                <Label Text="Chat"
-                       TextColor="White"
-                       VerticalTextAlignment="Center"
-                       FontSize="14" />
-            </HorizontalStackLayout>
-            <Border.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnChatClicked" />
-            </Border.GestureRecognizers>
-            <Border.Shadow>
-                <Shadow Brush="Black"
-                        Opacity="0.3"
-                        Offset="2,2"
-                        Radius="8" />
-            </Border.Shadow>
+    <VerticalStackLayout>
+        <Border
+            Stroke="Snow"
+            StrokeShape="RoundRectangle 200"
+            WidthRequest="100"
+            HeightRequest="100"
+            Margin="10, 30, 10, 10">
+            <Image
+                Source="account.png"
+                HeightRequest="100"
+                WidthRequest="100"/>
         </Border>
-
-    </AbsoluteLayout>
+        <Label 
+            Text="Erik"
+            VerticalOptions="Center"  
+            HorizontalOptions="Center"
+            FontAttributes="Bold"/>
+        <Border
+            HeightRequest="50"
+            WidthRequest="350"
+            BackgroundColor="Gray"
+            Margin="10, 20, 10, 0"
+            
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <Label
+                    Text="Mijn gegevens                                                    >"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    Margin="50,0,0,0"/>
+        </Border>
+        <Border
+            HeightRequest="50"
+            WidthRequest="350"
+            BackgroundColor="Gray"
+            Margin="10, 20, 10, 0"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <Button
+                BackgroundColor="Gray"
+                x:Name="Declartiesbutton"
+                Clicked="Declartiesbutton_Clicked"
+                Text="Mijn declaraties                                                 >"
+                TextColor="White"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Margin="34,0,0,0"/>
+        </Border>
+        <Border
+            HeightRequest="50"
+            WidthRequest="350"
+            BackgroundColor="Gray"
+            Margin="10, 20, 10, 0"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <HorizontalStackLayout>
+            
+            <Label
+                Text="App Instellingen                                                >"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Margin="50,0,0,0"/>
+            </HorizontalStackLayout>
+        </Border>
+    </VerticalStackLayout>
 </ContentPage>
