@@ -8,56 +8,48 @@
         <VerticalStackLayout Padding="20" Spacing="15">
 
             <Label Text="Naam" />
-            <Entry Placeholder="Voer uw naam in" />
+            <Entry x:Name="Naam" Placeholder="Voer uw naam in" />
 
             <Label Text="Woonplaats" />
-            <Entry Placeholder="Voer uw woonplaats in" />
+            <Entry x:Name="Woonplaats" Placeholder="Voer uw woonplaats in" />
 
             <Label Text="IBAN-nummer" />
-            <Entry Placeholder="Voer uw IBAN in"  />
+            <Entry x:Name="Iban" Placeholder="Voer uw IBAN in" />
 
             <Label Text="Type"/>
-            <Picker Title="Selecteer declaratietype">
+            <Picker x:Name="Type" Title="Selecteer declaratietype">
                 <Picker.Items>
                     <x:String>Reiskosten</x:String>
                     <x:String>Parkeerkosten</x:String>
                 </Picker.Items>
             </Picker>
 
-            <ProgressBar></ProgressBar>
             <Grid ColumnDefinitions="*,2*,*" Padding="0,20,0,0">
-                <Label 
-                    Text="Datum" 
-                    FontAttributes="Bold" />
-                <Label 
-                    Text="Omschrijving" Grid.Column="1" FontAttributes="Bold" />
+                <Label Text="Datum" FontAttributes="Bold" />
+                <Label Text="Omschrijving" Grid.Column="1" FontAttributes="Bold" />
                 <Label Text="Bedrag (€)" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="End" />
             </Grid>
 
-
             <Grid ColumnDefinitions="*,2*,*" Padding="0,5">
-                <Entry Placeholder="dd-mm-jj" />
-                <Entry Placeholder="Omschrijving" Grid.Column="1" />
-                <Entry Placeholder="0,00" Grid.Column="2" Keyboard="Numeric" />
+                <DatePicker x:Name="Datum" WidthRequest="300" HorizontalOptions="Start"/>
+                <Entry x:Name="Omschrijving" Placeholder="Omschrijving" Grid.Column="1" />
+                <Entry x:Name="Bedrag" Placeholder="0,00" Grid.Column="2" Keyboard="Numeric" />
             </Grid>
 
-            <Label Text="Totaal bedrag (€)" Margin="0,20,0,0" />
-            <Entry Placeholder="0,00" Keyboard="Numeric" />
+            <Label Text="Voeg een foto toe" />
 
-            <Label Text="Voeg een foto toe"/>
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Maak foto" Clicked="OnTakePhotoClicked" />
+                <Button Text="Kies foto" Clicked="OnPickPhotoClicked" />
+            </HorizontalStackLayout>
+
+            <Image x:Name="PhotoPreview" HeightRequest="200" />
+
             <Button 
-                    ImageSource="https://pixsector.com/cache/d01b7e30/av7801257c459e42a24b5.png"
-                    
-                    BackgroundColor="Gray" 
-                    TextColor="White" 
-                    CornerRadius="3" 
-                    HeightRequest="120"
-                    Clicked="OnAddPhotoClicked"/>
-
-                <Button 
-                    Text="Declaratie toevoegen" 
-                    BackgroundColor="#2196F3" 
-                    TextColor="White"  />
+                Text="Declaratie toevoegen" 
+                BackgroundColor="#2196F3" 
+                TextColor="White" 
+                Clicked="OnAddDeclarationClicked"/>
 
         </VerticalStackLayout>
     </ScrollView>

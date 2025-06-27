@@ -19,8 +19,8 @@
         <Tab Title="Home" Icon="home_icon.png" Route="MainPage">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}"/>
         </Tab>
-        <Tab Title="Testpage" Icon="account.png" >
-            <ShellContent ContentTemplate="{DataTemplate views:Account}" />
+        <Tab Title="Bezorgingen" Icon="testfoto.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:Bezorgingen}" />
         </Tab>
     </TabBar>
 

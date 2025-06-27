@@ -23,15 +23,16 @@
                 FontSize="15"
                 HorizontalOptions="Start"/>
 
-            <Border
-                HeightRequest="500"
-                Stroke="White"
-                StrokeThickness="0.2"
-                Margin="15,5,15,15">
-                <Label
-                   x:Name="DeclaratiesContent"
-                   Text="{Binding Declaratiescontent}"/>
-            </Border>
+            <ListView x:Name="DeclaratiesListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell
+                        Text="{Binding Type}"
+                        TextColor="White"                           
+                        Detail="{Binding ToegevoegdOp, StringFormat='Toegevoegd op: {0:dd-MM-yyyy HH:mm}'}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

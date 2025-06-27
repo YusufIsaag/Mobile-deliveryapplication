@@ -12,10 +12,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    private void OnAccountButtonClicked(object sender, EventArgs e)
-    {
-        // Hier kun je later account-functionaliteit toevoegen
-    }
+  
 
     // Camera-functie: foto maken en opslaan
     private async void OnTakePhotoClicked(object sender, EventArgs e)
