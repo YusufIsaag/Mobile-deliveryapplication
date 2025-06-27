@@ -59,7 +59,7 @@ namespace Mobile_deliveryapplication.Views
             if (input.Contains("onderweg") || input.Contains("ben onderweg") || input.Contains("kom eraan"))
                 return "Hoelang duurt het nog ongeveer?";
 
-            if (input.Contains("minuut") || input.Contains("zo daar") || input.Contains("5 minuten"))
+            if (input.Contains("minuut") || input.Contains("zo daar") || input.Contains("minuten"))
                 return "Helemaal prima!";
 
             if (input.Contains("deur") || input.Contains("open") || input.Contains("deur open"))
