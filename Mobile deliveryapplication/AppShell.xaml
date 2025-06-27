@@ -22,6 +22,9 @@
         <Tab Title="Testpage" Icon="account.png" >
             <ShellContent ContentTemplate="{DataTemplate views:Account}" />
         </Tab>
+        <ShellContent Title="Chat" 
+              ContentTemplate="{DataTemplate views:ChatPage}" 
+              Route="ChatPage" />
     </TabBar>
 
 </Shell>
