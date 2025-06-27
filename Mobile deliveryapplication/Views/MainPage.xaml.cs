@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using Microsoft.Maui.Controls;
 
+
 namespace Mobile_deliveryapplication.Views;
 
 public partial class MainPage : ContentPage
@@ -42,6 +43,10 @@ public partial class MainPage : ContentPage
     private async void OnViewStatusClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new StatusPage());
+    }
+    private async void OnLastDeliveriesClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LastDeliveriesPage());
     }
 }
 
