@@ -10,6 +10,7 @@ namespace Mobile_deliveryapplication
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(Account), typeof(Account));
+            Routing.RegisterRoute(nameof(ChatPage), typeof(ChatPage));
         }
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)

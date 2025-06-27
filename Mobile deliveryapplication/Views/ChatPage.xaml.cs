@@ -12,7 +12,14 @@ namespace Mobile_deliveryapplication.Views
         {
             InitializeComponent();
             BindingContext = this;
+
+            Messages.Add(new ChatMessage
+            {
+                Text = "Hallo met Johan, wat is de status van mijn bestelling?",
+                IsUser = false
+            });
         }
+
 
         private void OnSendClicked(object sender, EventArgs e)
         {
@@ -43,12 +50,14 @@ namespace Mobile_deliveryapplication.Views
                 return "Ja hoor, geen probleem.";
             if (input.Contains("vertraging"))
                 return "Geen probleem, neem je tijd.";
-            if (input.Contains("hallo"))
-                return "Hoi";
             if (input.Contains("onderweg"))
                 return "Hoelang duurt het nog?";
             if (input.Contains("minuten"))
                 return "Helemaal prima";
+            if (input.Contains("deur"))
+                return "Ik kom de deur nu open maken! …Èn moment!";
+            if (input.Contains("geleverd"))
+                return "Bedankt voor de levering!";
 
             return "Bedankt voor de update!";
         }
