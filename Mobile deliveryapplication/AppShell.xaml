@@ -22,7 +22,7 @@
         <Tab Title="Bezorgingen" Icon="testfoto.png" >
             <ShellContent ContentTemplate="{DataTemplate views:Bezorgingen}" />
         </Tab>
-        <ShellContent Title="Chat" 
+        <ShellContent Title="Chat" Icon="chat_icon.png"
               ContentTemplate="{DataTemplate views:ChatPage}" 
               Route="ChatPage" />
     </TabBar>
