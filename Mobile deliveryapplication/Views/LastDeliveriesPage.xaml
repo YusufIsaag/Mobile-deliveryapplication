@@ -1,45 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile_deliveryapplication.Views.LastDeliveriesPage"
-             Title="Laatste leveringen">
+             Title="Laatste levering">
 
-    <CollectionView x:Name="OrdersList" Margin="10">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Frame BorderColor="Gray" Margin="5" Padding="10" CornerRadius="5">
-                    <StackLayout>
-                        <Label Text="{Binding Id, StringFormat='Order ID: {0}'}" FontAttributes="Bold"/>
-                        <Label Text="{Binding Customer.Name, StringFormat='Klant: {0}'}"/>
-                        <Label Text="{Binding OrderDate, StringFormat='Datum: {0:dd-MM-yyyy}'}" />
+    <VerticalStackLayout Padding="20">
+        <Label Text="ID:" FontAttributes="Bold"/>
+        <Label x:Name="IdLabel" />
 
-                        <Label Text="Producten:" FontAttributes="Bold" Margin="0,5,0,0"/>
-                        <CollectionView ItemsSource="{Binding Products}" HeightRequest="100">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <StackLayout>
-                                        <Label Text="{Binding Name}" />
-                                        <Label Text="{Binding Description}" FontAttributes="Italic" FontSize="Small"/>
-                                        <Label Text="{Binding Price, StringFormat='Prijs: {0:C}'}" />
-                                    </StackLayout>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-
-                        <Label Text="Leveringsstatussen:" FontAttributes="Bold" Margin="0,5,0,0"/>
-                        <CollectionView ItemsSource="{Binding DeliveryStates}" HeightRequest="100">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <StackLayout Orientation="Horizontal" Spacing="10">
-                                        <Label Text="{Binding State}" />
-                                        <Label Text="{Binding DateTime, StringFormat='{0:dd-MM-yyyy HH:mm}'}"/>
-                                    </StackLayout>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-                    </StackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-
+        <Label Text="Naam:" FontAttributes="Bold" Margin="0,20,0,0"/>
+        <Label x:Name="NameLabel" />
+    </VerticalStackLayout>
 </ContentPage>

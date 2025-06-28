@@ -8,10 +8,7 @@ namespace Mobile_deliveryapplication.Models
 {
     public class DeliveryModel
     {
-        public int Id { get; set; }
-        public int State { get; set; }
-        public DateTime DateTime { get; set; }
-        public int OrderId { get; set; }
-        public OrderModel Order { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }
