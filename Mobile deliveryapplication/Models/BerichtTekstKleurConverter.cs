@@ -10,7 +10,7 @@ namespace Mobile_deliveryapplication.Models
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             bool isVanGebruiker = (bool)value;
-            return isVanGebruiker ? Colors.White : Colors.Black;
+            return isVanGebruiker ? Colors.Pink : Colors.Black;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

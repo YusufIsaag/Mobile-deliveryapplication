@@ -87,29 +87,6 @@
                 </VerticalStackLayout>
             </Border>
 
-            <Button 
-                Text="Maak afleverfoto"
-                Clicked="OnTakePhotoClicked"
-                BackgroundColor="DarkCyan"
-                TextColor="White"
-                CornerRadius="20"
-                WidthRequest="200"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                VerticalOptions="Start"
-                Margin="0,720,0,0"/>
-
-            <Button 
-                Text="Bekijk pakketstatus"
-                Clicked="OnViewStatusClicked"
-                BackgroundColor="DarkCyan"
-                TextColor="White"
-                CornerRadius="20"
-                WidthRequest="200"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                VerticalOptions="Start"
-                Margin="0,790,0,0"/>
         </Grid>
     </ScrollView>
 
