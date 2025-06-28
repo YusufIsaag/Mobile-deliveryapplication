@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Mobile_deliveryapplication.Models
 {
-    public class DeliveryModel
+    public class DeliveryStateModel
     {
         public int Id { get; set; }
         public int State { get; set; }
         public DateTime DateTime { get; set; }
         public int OrderId { get; set; }
-        public OrderModel Order { get; set; }
+        public int DeliveryServiceId { get; set; }
+        public DeliveryServiceModel DeliveryService { get; set; }
     }
 }

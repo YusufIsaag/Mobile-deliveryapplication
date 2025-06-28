@@ -12,49 +12,48 @@ namespace Mobile_deliveryapplication.API
     public static class ApiService
     {
 
-        public static void GetDeliveryServices()
 
+
+        public static async Task<OrderModel?> GetOrderAsync(int orderId)
         {
-            using (var client = new HttpClient())
-                {
-                    var apiKey = "b9e7d970-8d82-4b56-92d8-d18fbb4b68a7";
-                    var endpoint = new Uri($"http://51.137.100.120:5000/api/DeliveryServices/b9e7d970-8d82-4b56-92d8-d18fbb4b68a7\r\n");
+            using var client = new HttpClient();
+            var apiKey = "b9e7d970-8d82-4b56-92d8-d18fbb4b68a7";
+            var endpoint = $"http://51.137.100.120:5000/api/Order/{orderId}";
 
-                    var result = client.GetAsync(endpoint).Result;
+            // Voeg header toe (probeer eerst deze naam, kan anders zijn)
+            client.DefaultRequestHeaders.Add("ApiKey", apiKey);
 
-                    if (result.IsSuccessStatusCode)
-                    {
-                        var json = result.Content.ReadAsStringAsync().Result;
-                        Console.WriteLine(json);
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Fout: {result.StatusCode}");
-                    }
-                }
-            }
-        public static async Task<DeliveryModel> GetDeliveryHistoryAsync()
-        {
-            using (var client = new HttpClient())
+            var response = await client.GetAsync(endpoint);
+            if (!response.IsSuccessStatusCode)
             {
-                var apiKey = "b9e7d970-8d82-4b56-92d8-d18fbb4b68a7";
-                var endpoint = $"http://51.137.100.120:5000/api/DeliveryServices/{apiKey}";
+                Console.WriteLine($"API call failed: {response.StatusCode}");
+                return null;
+            }
 
-                var response = await client.GetAsync(endpoint);
+            var json = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"API response: {json}");
 
-                if (response.IsSuccessStatusCode)
+            try
+            {
+                var order = JsonSerializer.Deserialize<OrderModel>(json, new JsonSerializerOptions
                 {
-                    var json = await response.Content.ReadAsStringAsync();
-                    var delivery = JsonSerializer.Deserialize<DeliveryModel>(json);
-                    return delivery ?? new DeliveryModel();
-                }
-                else
-                {
-                    return new DeliveryModel();
-                }
+                    PropertyNameCaseInsensitive = true
+                });
+                return order;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Deserialization error: {ex.Message}");
+                return null;
             }
         }
+
+
+
+
+
     }
+
 
 }
 
