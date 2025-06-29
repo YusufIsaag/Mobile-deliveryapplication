@@ -12,5 +12,14 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
-}
 
+    private async void OnLastDeliveriesClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LastDeliveriesPage());
+    }
+
+    private async void OnViewStatusClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new StatusPage());
+    }
+}

@@ -11,26 +11,20 @@
     </Page.Behaviors>
 
     <ScrollView>
-        <Grid>
+        <VerticalStackLayout Spacing="20" Padding="15">
             <Label
                 Text="Nieuws"
                 TextColor="White"
                 FontSize="18"
                 FontAttributes="None"
-                HorizontalOptions="Start" 
-                VerticalOptions="Start"
-                Margin="15,10"/>
+                HorizontalOptions="Start" />
 
             <Border 
-                HorizontalOptions="Start"
-                VerticalOptions="Start"
                 HeightRequest="200"
-                WidthRequest="350"
                 BackgroundColor="darkslategrey"
                 Stroke="White"
                 StrokeThickness="1"
-                StrokeShape="RoundRectangle 20, 10, 0, 40"
-                Margin="15,50">
+                StrokeShape="RoundRectangle 20, 10, 0, 40">
                 <VerticalStackLayout Padding="15" Spacing="8">
                     <Label Text="Nieuwe bezorgroute actief in regio Limburg" 
                            TextColor="White"
@@ -38,21 +32,16 @@
                            FontAttributes="Bold"/>
                     <Label Text="Vanaf volgende week is de nieuwe route naar Roermond actief. Controleer je planning in de app."
                            TextColor="White"
-                           FontSize="13"
-                           />
+                           FontSize="13"/>
                 </VerticalStackLayout>
             </Border>
 
             <Border 
-                HorizontalOptions="Start"
-                VerticalOptions="Start"
                 HeightRequest="200"
-                WidthRequest="350"
                 BackgroundColor="darkslategrey"
                 Stroke="White"
                 StrokeThickness="1"
-                StrokeShape="RoundRectangle 20, 10, 0, 40"
-                Margin="15,270">
+                StrokeShape="RoundRectangle 20, 10, 0, 40">
                 <VerticalStackLayout Padding="15" Spacing="8">
                     <Label Text="Bezorger van de maand: Ahmed uit Maastricht" 
                            TextColor="White"
@@ -60,21 +49,16 @@
                            FontAttributes="Bold"/>
                     <Label Text="Gefeliciteerd Ahmed! Hij behaalde een gemiddelde beoordeling van 4.9 sterren. Goed bezig!"
                            TextColor="White"
-                           FontSize="13"
-                           />
+                           FontSize="13"/>
                 </VerticalStackLayout>
             </Border>
 
             <Border 
-                HorizontalOptions="Start"
-                VerticalOptions="Start"
                 HeightRequest="200"
-                WidthRequest="350"
                 BackgroundColor="darkslategrey"
                 Stroke="White"
                 StrokeThickness="1"
-                StrokeShape="RoundRectangle 20, 10, 0, 40"
-                Margin="15,490,0,0">
+                StrokeShape="RoundRectangle 20, 10, 0, 40">
                 <VerticalStackLayout Padding="15" Spacing="8">
                     <Label Text="Doe mee: win een cadeaubon met onze zomeractie!" 
                            TextColor="White"
@@ -82,13 +66,31 @@
                            FontAttributes="Bold"/>
                     <Label Text="Lever deze maand 50 pakketten of meer af en maak kans op een cadeaubon t.w.v. €50,-."
                            TextColor="White"
-                           FontSize="13"
-                           />
+                           FontSize="13"/>
                 </VerticalStackLayout>
             </Border>
 
-        </Grid>
-    </ScrollView>
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    Text="Laatste leveringen"
+                    Clicked="OnLastDeliveriesClicked"
+                    BackgroundColor="DarkCyan"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="200"
+                    HeightRequest="50" />
 
+                <Button 
+                    Text="Bekijk pakketstatus"
+                    Clicked="OnViewStatusClicked"
+                    BackgroundColor="DarkCyan"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="200"
+                    HeightRequest="50" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
+
 
