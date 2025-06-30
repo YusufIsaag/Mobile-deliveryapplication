@@ -80,7 +80,7 @@
                     WidthRequest="200"
                     HeightRequest="50" />
 
-                <Button 
+                 <Button 
                     Text="Bekijk pakketstatus"
                     Clicked="OnViewStatusClicked"
                     BackgroundColor="DarkCyan"

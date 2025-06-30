@@ -17,7 +17,7 @@ namespace Mobile_deliveryapplication.Views
         {
             try
             {
-                var orderIds = new List<int> { 1, 2, 3, 4 };
+                var orderIds = new List<int> { 1, 2, 3, 4, 5, 6 };
                 var orders = new List<OrderModel>();
 
                 foreach (var id in orderIds)
